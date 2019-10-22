@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class DirectoryComponent extends Component {
+class Directory extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class DirectoryComponent extends Component {
   }
 }
 
-export default DirectoryComponent;
+export default Directory;
