@@ -17,6 +17,11 @@ class SignInComponent extends Component {
     this.setState({email:'', password:''})
   }
 
+  handleChange = event => {
+    const { value, name } = event;
+    this.setState({[name]: value})
+  }
+
   render() {
     return (
       <div className="sign-in">
@@ -25,10 +30,10 @@ class SignInComponent extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">Email</label>
-          <input name="email" value={this.state.email} required/>
+          <input name="email" value={this.state.email} required onChange={this.handleChange} />
           <label htmlFor="password">Password</label>
           <input name="password" value={this.state.password} required/>
-          <input type='submut' value='Submit Form'/>
+          <input type='submut' value='Submit Form' onChange={this.handleChange}/>
         </form>
       </div>
     );
