@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import FormInput from "../form-input/form-input.component";
 import "./sign-in.styles.scss";
 
 class SignInComponent extends Component {
@@ -11,16 +11,15 @@ class SignInComponent extends Component {
     };
   }
 
-  handleSubmit = (e) =>
-  {
+  handleSubmit = e => {
     e.preventDefault();
-    this.setState({email:'', password:''})
-  }
+    this.setState({ email: "", password: "" });
+  };
 
   handleChange = event => {
     const { value, name } = event;
-    this.setState({[name]: value})
-  }
+    this.setState({ [name]: value });
+  };
 
   render() {
     return (
@@ -29,11 +28,24 @@ class SignInComponent extends Component {
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input name="email" value={this.state.email} required onChange={this.handleChange} />
-          <label htmlFor="password">Password</label>
-          <input name="password" value={this.state.password} required/>
-          <input type='submut' value='Submit Form' onChange={this.handleChange}/>
+          <FormInput
+            label="email"
+            name="email"
+            value={this.state.email}
+            required
+            handleChange={this.handleChange}
+          />
+          <FormInput
+            label="password"
+            name="password"
+            value={this.state.password}
+            required
+            handleChange={this.handleChange}
+          />
+          <input
+            type="submut"
+            value="Submit Form"
+          />
         </form>
       </div>
     );
