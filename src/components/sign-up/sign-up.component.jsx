@@ -42,26 +42,26 @@ class SignUp extends Component {
             handleChange={this.handleChange}
           />
           <FormInput
-            type='text'
-            label='Display Name'
-            name='displayName'
-            value={displayName}
+            type='email'
+            label='Email'
+            name='email'
+            value={email}
             required
             handleChange={this.handleChange}
           />
           <FormInput
-            type='text'
-            label='Display Name'
-            name='displayName'
-            value={displayName}
+            type='password'
+            label='Password'
+            name='password'
+            value={password}
             required
             handleChange={this.handleChange}
           />
           <FormInput
-            type='text'
-            label='Display Name'
-            name='displayName'
-            value={displayName}
+            type='password'
+            label='Confirm Password'
+            name='confirmPassword'
+            value={confirmPassword}
             required
             handleChange={this.handleChange}
           />
