@@ -1,5 +1,5 @@
-export default const CartACtionTypes = {
+const CartACtionTypes = {
   TOGGLE_CART_HIDDEN: 'TOGGLE_CART_HIDDEN'
 }
 
-
+export default CartACtionTypes;
